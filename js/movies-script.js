@@ -3,7 +3,7 @@
 const movies = [
   {
     id: 1,
-    titel: "Inception",
+    title: "Inception",
     genre: "science-fiction",
     year: "2010",
     duration: "2.28",
@@ -12,7 +12,7 @@ const movies = [
   },
   {
     id: 2,
-    titel: "The Dark Knight",
+    title: "The Dark Knight",
     genre: "action",
     year: "2008",
     duration: "2.32",
@@ -21,7 +21,7 @@ const movies = [
   },
   {
     id: 3,
-    titel: "Forrest Gump",
+    title: "Forrest Gump",
     genre: "drama",
     year: "1994",
     duration: "2.22",
@@ -30,7 +30,7 @@ const movies = [
   },
   {
     id: 4,
-    titel: "Superbad",
+    title: "Superbad",
     genre: "comedy",
     year: "2007",
     duration: "1.53",
@@ -39,7 +39,7 @@ const movies = [
   },
   {
     id: 5,
-    titel: "It",
+    title: "It",
     genre: "horror",
     year: "2017",
     duration: "2.15",
@@ -102,14 +102,14 @@ function displayMovies(movieList) {
     .map((movie) => {
       return `
     <article>
-      <h2>${movie.titel}</h2>
+      <h2>${movie.title}</h2>
       <ul>
       <li>${movie.genre}</li>
       <li>${movie.year}</li>
       <li>${movie.duration}</li>
       </ul>
       <figure>
-        <a href="${movie.url}"></a><img src="${movie.img}" alt="${movie.titel}">
+        <a href="${movie.url}"><img src="${movie.img}" alt="${movie.title}"></a>
         <figcaption>Læs mere på IMDB</figcaption>
         </figure>
     </article>
