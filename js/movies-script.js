@@ -109,8 +109,8 @@ function displayMovies(movieList) {
       <li>${movie.duration}</li>
       </ul>
       <figure>
-        <a href="${movie.url}"></a><img src="${movie.img}" alt="${movie.titel}"></a>
-        <figcaption>${movie.titel}</figcaption>
+        <a href="${movie.url}"></a><img src="${movie.img}" alt="${movie.titel}">
+        <figcaption>Læs mere på IMDB</figcaption>
         </figure>
     </article>
     `;
