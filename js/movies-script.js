@@ -98,22 +98,25 @@ const movies = [
 const moviesContainer = document.querySelector("#movies-container");
 
 function displayMovies(movieList) {
-  moviesContainer.innerHTML = "";
-
-  movies.forEach((item) => {
-    moviesContainer.innerHTML += `
+  const html = movieList
+    .map((movie) => {
+      return `
     <article>
-      <h2>${item.titel}</h2>
-      <p>${item.genre}</p>
-      <p>${item.year}</p>
-      <p>${item.duration}</p>
+      <h2>${movie.titel}</h2>
+      <ul>
+      <li>${movie.genre}</li>
+      <li>${movie.year}</li>
+      <li>${movie.duration}</li>
+      </ul>
       <figure>
-        <a href="${item.url}"></a><img src="${item.img}" alt="${item.titel}"></a>
-        <figcaption>${item.titel}</figcaption>
+        <a href="${movie.url}"></a><img src="${movie.img}" alt="${movie.titel}"></a>
+        <figcaption>${movie.titel}</figcaption>
         </figure>
     </article>
     `;
-  });
+    })
+    .join("");
+  moviesContainer.innerHTML = html;
 }
 
 displayMovies(movies);
